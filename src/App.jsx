@@ -30,7 +30,7 @@ function App() {
                 placeholder="Digite a senha"
               />
               <button
-                type="button"
+                type="submit"
                 className="bg-fuchsia-800 mt-4 p-2 rounded-lg text-white w-full hover:cursor-pointer hover:bg-fuchsia-900 ">
                 Entrar
               </button>
