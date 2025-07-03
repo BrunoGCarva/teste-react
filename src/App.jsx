@@ -1,37 +1,46 @@
 import './App.css'
-
+import { FaCat } from "react-icons/fa";
 function App() {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <button type="button" className="uppercase bg-green-500 md:bg-red-500 p-2 rounded-lg">me clique-me</button>
-        <form action="https://getform.io/f/aqomwlka" method="POST">
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <input type="text" name="message" />
-  {/* add hidden Honeypot input to prevent spams */}
-  <input type="hidden" name="_gotcha" style={{ display: "none !important" }} />
-  {/* checkbox handle */}
-  <input
-    type="checkbox"
-    name="subscribe"
-    defaultValue="yes"
-    defaultChecked=""
-  />
-  <input type="hidden" name="subscribe" defaultValue="no" />
-  {/* radio button handle */}
-  <input type="radio" name="gender" defaultValue="male" defaultChecked="" />
-  <input type="radio" name="gender" defaultValue="female" />
-  <input type="radio" name="gender" defaultValue="other" />
-  {/* select field handle */}
-  <select name="work-experience">
-    <option value="one-year">0-1 years</option>
-    <option value="one-five-years">1-5 years</option>
-  </select>
-  <button type="submit">Send</button>
-</form>
-
+  return (
+    <div className="flex flex-col justify-center items-center h-screen bg-fuchsia-200">
+      <header className="w-full h-15 bg-white text-purple-800 p-4 text-center">
+        <h1 className="text-xl font-bold inline-flex items-center justify-center">
+          <FaCat className="text-2xl mr-2" />
+          DudaSys
+          <FaCat className="text-2xl ml-2" />
+        </h1>
+      </header>
+      
+      <div className="flex flex-col items-center justify-center flex-grow">
+        <div className="bg-white p-6 rounded-lg shadow-lg w-80">
+          <h1 className="text-center  mb-4 text-xl">Entrar na sua Conta</h1>
+          <div className="space-y-2">
+            <input
+              type="email"
+              name="email"
+              className="p-2 border  rounded w-full border-neutral-400 focus:outline-violet-500"
+              placeholder="Digite o email"
+            />
+            <input
+              type="password"
+              className="py-2 px-4 border rounded w-full  border-neutral-400 focus:outline-violet-500"
+              placeholder="Digite a senha"
+            />
+          </div>
+          <button
+            type="button"
+            className="bg-fuchsia-800 mt-4 p-2 rounded-lg text-white w-full hover:cursor-pointer hover:bg-fuchsia-900 ">
+            Entrar
+          </button>
+        </div>
+        <form
+          action="https://getform.io/f/aqomwlka"
+          method="POST"
+          className="mt-4">
+        </form>
       </div>
-    );
+    </div>
+  );
 }
 
 export default App
